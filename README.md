@@ -7,6 +7,8 @@ With this script you can setup a blog with nodejs and mongodb.
 
 > - Make sure MongoDB is open before installation.
 > - Make sure you have Node Js and Npm installed.
+> - Make sure you edit the settings.json file.
+
 
 #### <i class="icon-folder-open"></i> Starting poroject
 
