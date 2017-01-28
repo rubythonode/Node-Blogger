@@ -2,10 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Muhammed Furkan AYDIN</title>
-    <meta name="description" content="Web Designer & Developer from Earth">
-    <link rel="stylesheet" href="/css/main.css">
+    {{>head}}
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "NewsArticle",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://google.com/article"
+            },
+            "headline": "{{blog.title}}",
+            "datePublished": "{{{blog.created_date}}}",
+            "dateModified": "{{{blog.created_date}}}",
+            "author": {
+                "@type": "Person",
+                "name": "Muhammed Furkan AYDIN"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Turk Developer",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "http://www.turkdeveloper.com/img/profile_picture.jpg",
+                    "width": 926,
+                    "height": 926
+                }
+            },
+            "description": "{{blog.description}}"
+        }
+    </script>
 </head>
 
 <body class="show-menu">
@@ -14,11 +39,10 @@
         <section class="content-area">
             {{> menu}}
             <div class="article">
-                {{{blog.detail}}}
-                <br><br>
-                {{#if admin}}
-                <button class="btn" id="remove-article" value="{{blog.url}}">Remove</button>
-                {{/if}}
+                <h1>{{{blog.title}}}</h1>
+                <br><br> {{{blog.detail}}}
+                <br><br> {{#if admin}}
+                <button class="btn" id="remove-article" value="{{blog.url}}">Remove</button> {{/if}}
             </div>
             {{> footer}}
         </section>
