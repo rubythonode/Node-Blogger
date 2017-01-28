@@ -1,0 +1,47 @@
+//main:./main.less
+.intro {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    h1 {
+        color: rgba(0, 0, 0, .9);
+        font-size: 50px;
+        font-weight: 700;
+        margin: 0;
+    }
+    span {
+        font-size: 18px;
+        margin-top: 5px;
+        color: #808080;
+        margin-bottom: 45px;
+    }
+}
+
+.footer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 15px;
+    padding-bottom: 15px;
+    .left-footer {
+        width: 15%;
+        text-align: left;
+    }
+    .right-footer {
+        width: 85%;
+        text-align: right;
+    }
+    a {
+        color: #202020;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 600;
+    }
+}

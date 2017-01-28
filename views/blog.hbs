@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Muhammed Furkan AYDIN</title>
+    <meta name="description" content="Web Designer & Developer from Earth">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="show-menu">
+    <div class="container">
+        <section class="cover" style="background-image:url(/img/profile_picture.jpg);"></section>
+        <section class="content-area">
+            {{> menu}}
+            <div class="blog">
+                <div class="blog-area">
+                    {{#if blog}}
+                        {{#each blog}}
+                            <div class="blog-content">
+                                <a href="/blog/{{this.url}}"><h1>{{this.title}}</h1></a>
+                                <p>{{this.description}}</p>
+                                <a href="/blog/{{this.url}}" class="btn"> Read me </a>
+                            </div>
+                        {{/each}}
+                    {{else}}
+                    <h1>Sory, there is no blog post yet. Please come back later...</h1>
+                    {{/if}}
+                    {{#if pages}}
+                    <div class="pagination-area">
+                        <ul class="pagination">
+                            <li><a href="#">«</a></li>
+                            {{#each pages}}
+                                <li><a href="/blog?page={{this.number}}" {{#if this.active}} class="active" {{/if}}>{{this.number}}</a></li>                            
+                            {{/each}}
+                            <li><a href="#">»</a></li>
+                        </ul>
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+            {{> footer}}
+        </section>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Muhammed Furkan AYDIN</title>
+    <meta name="description" content="Web Designer & Developer from Earth">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="show-menu">
+    <div class="container">
+        <section class="cover" style="background-image:url(/img/profile_picture.jpg);"></section>
+        <section class="content-area">
+            {{> menu}}
+            <div class="article">
+                {{{blog.detail}}}
+                <br><br>
+                {{#if admin}}
+                <button class="btn" id="remove-article" value="{{blog.url}}">Remove</button>
+                {{/if}}
+            </div>
+            {{> footer}}
+        </section>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

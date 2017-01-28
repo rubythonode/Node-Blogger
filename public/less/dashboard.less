@@ -1,0 +1,88 @@
+//main:./main.less
+.dashboard {
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    .dashboard-area {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 100px;
+        .header {
+            h1 {
+                margin-bottom: 0;
+            }
+            span {
+                font-size: 18px;
+                margin-top: 5px;
+                color: #808080;
+                margin-bottom: 45px;
+            }
+        }
+        .body {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            ;
+            input {
+                width: 100%;
+                margin-right: 15px;
+                float: left;
+                margin-bottom: 22px;
+                border: none;
+                border-bottom: 1px solid #a6a9ac;
+                border-radius: 0;
+                font-size: 15px;
+                color: #a6a9ac;
+                padding: 12px 0;
+                line-height: 24px;
+                transition: all 0.2s ease-in-out;
+                display: block;
+                background-color: #fff;
+                background-image: none;
+                background-clip: padding-box;
+                overflow: visible;
+                &:focus {
+                    color: #55595c;
+                    background-color: #fff;
+                    outline: none;
+                }
+            }
+            .btn {
+                margin-top: 50px;
+                max-width: 150px;
+                position: relative;
+                padding-left: 66px;
+                border: 1px solid #a6a9ac;
+                border-radius: 30px;
+                padding: 10px 34px;
+                background: #ffffff;
+                color: #a6a9ac;
+                transition: all 0.2s ease-in-out;
+                display: inline-block;
+                font-weight: normal;
+                line-height: 1.25;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+                cursor: pointer;
+                user-select: none;
+                font-size: 1rem;
+                &:hover {
+                    background: #212121;
+                    border-color: #212121;
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

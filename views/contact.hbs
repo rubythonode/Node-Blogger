@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Muhammed Furkan AYDIN</title>
+    <meta name="description" content="Web Designer & Developer from Earth">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="show-menu">
+    <div class="container">
+        <section class="cover" style="background-image:url(/img/profile_picture.jpg);"></section>
+        <section class="content-area">
+            {{> menu}}
+            <div class="contact">
+                <div class="contact-area">
+                    <div class="header">
+                        <h1>Get in touch</h1>
+                        <span>Don’t be shy. Ask me a question.</span>
+                    </div>
+                    <div class="body">
+                        <div class="info-area">
+                            <input type="text" placeholder="Name" id="name">
+                            <input type="text" placeholder="Email" id="email">
+                        </div>
+                        <div class="text-area">
+                            <textarea cols="30" rows="10" placeholder="Your question" id="message"></textarea>
+                        </div>
+                    </div>
+                    <input type="button" id="send" class="btn" value="Send">
+                </div>
+            </div>
+            {{> footer}}
+        </section>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

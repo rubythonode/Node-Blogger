@@ -1,0 +1,21 @@
+<div class="menu-section">
+    <div class="menu-toggle">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
+    <nav>
+        <ul role="navigation" class="hidden">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/about-me">ABOUT</a></li>
+            <li><a href="/resume">RESUME</a></li>
+            <li><a href="/blog">BLOG</a></li>
+            <li><a href="/contact">CONTACT</a></li>
+            {{#if admin}}
+            <li><a href="/dashboard">WRITE BLOG</a></li>
+            <li><a href="/contact-request">CONTACT REQUEST</a></li>
+            <li><a href="/logout">LOGOUT</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+</div>
